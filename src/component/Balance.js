@@ -58,19 +58,21 @@ const Balance = () => {
               </span>
             : 0}
         </h3>
-        {income < 0
-          ? <div
-              className=""
-              style={{ color: "white", backgroundColor: "red",margin:10 }}
-            >
-              Expense is more than Savings..
-            </div>
-          : <div
-              className=""
-              style={{ color: "black", backgroundColor: "yellow",margin:10  }}
-            >
-              Savings are raising..
-            </div>}
+        {income < 0 &&
+          <div
+            className=""
+            style={{ color: "white", backgroundColor: "red", margin: 10 }}
+          >
+            Expense is more than Savings..
+          </div>}
+
+        {income > 0 &&
+          <div
+            className=""
+            style={{ color: "black", backgroundColor: "yellow", margin: 10 }}
+          >
+            Savings are raising..
+          </div>}
       </div>
     </div>
   );
